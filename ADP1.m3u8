@@ -1,0 +1,7 @@
+#EXTM3U
+#EXT-X-STREAM-INF:BANDWIDTH=800000,RESOLUTION=854x480
+https://top1-cdnnew.newkso.ru/top1-cdn/N0nZoHOXsC/mono.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=1400000,RESOLUTION=1280x720
+https://top1-cdnnew.newkso.ru/top1-cdn/VwKl9zBj0W/mono.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=3000000,RESOLUTION=1920x1080
+https://top1-cdnnew.newkso.ru/top1-cdn/WKa0rx9QAg/mono.m3u8
