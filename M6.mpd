@@ -1,0 +1,100 @@
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="urn:mpeg:dash:schema:mpd:2011"
+     xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd"
+     minBufferTime="PT1.5S" type="static" mediaPresentationDuration="PT30S"
+     profiles="urn:mpeg:dash:profile:isoff-on-demand:2011">
+
+  <Period duration="PT30S">
+  
+    <!-- 1080p -->
+    <AdaptationSet mimeType="video/mp4" codecs="hev1.1.6.L120.90" segmentAlignment="true" startWithSAP="1">
+      <Representation id="0" bandwidth="4096000" width="1920" height="1080" frameRate="25">
+        <BaseURL>https://alraqi-api.com/apollo12/TVD4001/</BaseURL>
+        <SegmentList timescale="12800" duration="38400">
+          <Initialization sourceURL="video-init0.m4s"/>
+          <SegmentURL media="video-0-50563219.m4s"/>
+          <SegmentURL media="video-0-50563220.m4s"/>
+          <SegmentURL media="video-0-50563221.m4s"/>
+          <SegmentURL media="video-0-50563222.m4s"/>
+          <SegmentURL media="video-0-50563223.m4s"/>
+          <SegmentURL media="video-0-50563224.m4s"/>
+          <SegmentURL media="video-0-50563225.m4s"/>
+          <SegmentURL media="video-0-50563226.m4s"/>
+          <SegmentURL media="video-0-50563227.m4s"/>
+          <SegmentURL media="video-0-50563228.m4s"/>
+        </SegmentList>
+      </Representation>
+
+      <!-- 720p -->
+      <Representation id="1" bandwidth="2048000" width="1280" height="720" frameRate="25">
+        <Initialization sourceURL="video-init1.m4s"/>
+        <SegmentList timescale="12800" duration="38400">
+          <SegmentURL media="video-1-50563219.m4s"/>
+          <SegmentURL media="video-1-50563220.m4s"/>
+          <SegmentURL media="video-1-50563221.m4s"/>
+          <SegmentURL media="video-1-50563222.m4s"/>
+          <SegmentURL media="video-1-50563223.m4s"/>
+          <SegmentURL media="video-1-50563224.m4s"/>
+          <SegmentURL media="video-1-50563225.m4s"/>
+          <SegmentURL media="video-1-50563226.m4s"/>
+          <SegmentURL media="video-1-50563227.m4s"/>
+          <SegmentURL media="video-1-50563228.m4s"/>
+        </SegmentList>
+      </Representation>
+
+      <!-- 576p -->
+      <Representation id="2" bandwidth="1024000" width="720" height="576" frameRate="25">
+        <Initialization sourceURL="video-init2.m4s"/>
+        <SegmentList timescale="12800" duration="38400">
+          <SegmentURL media="video-2-50563219.m4s"/>
+          <SegmentURL media="video-2-50563220.m4s"/>
+          <SegmentURL media="video-2-50563221.m4s"/>
+          <SegmentURL media="video-2-50563222.m4s"/>
+          <SegmentURL media="video-2-50563223.m4s"/>
+          <SegmentURL media="video-2-50563224.m4s"/>
+          <SegmentURL media="video-2-50563225.m4s"/>
+          <SegmentURL media="video-2-50563226.m4s"/>
+          <SegmentURL media="video-2-50563227.m4s"/>
+          <SegmentURL media="video-2-50563228.m4s"/>
+        </SegmentList>
+      </Representation>
+
+      <!-- 480p -->
+      <Representation id="3" bandwidth="600000" width="640" height="480" frameRate="25">
+        <Initialization sourceURL="video-init3.m4s"/>
+        <SegmentList timescale="12800" duration="38400">
+          <SegmentURL media="video-3-50563219.m4s"/>
+          <SegmentURL media="video-3-50563220.m4s"/>
+          <SegmentURL media="video-3-50563221.m4s"/>
+          <SegmentURL media="video-3-50563222.m4s"/>
+          <SegmentURL media="video-3-50563223.m4s"/>
+          <SegmentURL media="video-3-50563224.m4s"/>
+          <SegmentURL media="video-3-50563225.m4s"/>
+          <SegmentURL media="video-3-50563226.m4s"/>
+          <SegmentURL media="video-3-50563227.m4s"/>
+          <SegmentURL media="video-3-50563228.m4s"/>
+        </SegmentList>
+      </Representation>
+    </AdaptationSet>
+
+    <!-- الصوت -->
+    <AdaptationSet mimeType="audio/mp4" codecs="mp4a.40.2" segmentAlignment="true" lang="ara">
+      <Representation id="4" bandwidth="96000" audioSamplingRate="48000">
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+        <BaseURL>https://alraqi-api.com/apollo12/TVD4001/</BaseURL>
+        <SegmentList timescale="48000">
+          <Initialization sourceURL="audio-init4.m4s"/>
+          <SegmentURL media="audio-4-50563219.m4s"/>
+          <SegmentURL media="audio-4-50563220.m4s"/>
+          <SegmentURL media="audio-4-50563221.m4s"/>
+          <SegmentURL media="audio-4-50563222.m4s"/>
+          <SegmentURL media="audio-4-50563223.m4s"/>
+          <SegmentURL media="audio-4-50563224.m4s"/>
+          <SegmentURL media="audio-4-50563225.m4s"/>
+          <SegmentURL media="audio-4-50563226.m4s"/>
+        </SegmentList>
+      </Representation>
+    </AdaptationSet>
+
+  </Period>
+</MPD>
