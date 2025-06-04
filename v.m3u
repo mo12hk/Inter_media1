@@ -21,8 +21,8 @@ https://apollo.tv12.workers.dev/apollo12/TVD4006/index.mpd
 #EXTINF:-1 tvg-id="beINSPORTS7" tvg-name="beIN SPORTS 7" tvg-logo="https://assets.bein.com/mena/sites/3/2015/06/beIN_SPORTS7_DIGITAL_Mono.png" group-title="beIN SPORTS",beIN SPORTS 7
 https://apollo.tv12.workers.dev/apollo12/TVD4007/index.mpd
 
-#EXTINF:-1 tvg-id="beINSPORTS8" tvg-name="beIN SPORTS 8" tvg-logo="https://assets.bein.com/mena/sites/3/2015/06/beIN_SPORTS8_DIGITAL_Mono.png" group-title="beIN SPORTS",beIN SPORTS 8
+#EXTINF:-1 tvg-id="beINSPORTS8" tvg-name="beIN SPORTS 8" tvg-logo="https://assets.bein.com/mena/sites/4/2023/09/logos-_beINSPORTS8.png" group-title="beIN SPORTS",beIN SPORTS 8
 https://apollo.tv12.workers.dev/apollo12/TVD4062/index.mpd
 
-#EXTINF:-1 tvg-id="beINSPORTS9" tvg-name="beIN SPORTS 9" tvg-logo="https://assets.bein.com/mena/sites/3/2015/06/beIN_SPORTS9_DIGITAL_Mono.png" group-title="beIN SPORTS",beIN SPORTS 9
+#EXTINF:-1 tvg-id="beINSPORTS9" tvg-name="beIN SPORTS 9" tvg-logo="https://assets.bein.com/mena/sites/4/2023/09/logos-_beINSPORTS9.png" group-title="beIN SPORTS",beIN SPORTS 9
 https://apollo.tv12.workers.dev/apollo12/TVD4063/index.mpd
