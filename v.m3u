@@ -2,7 +2,7 @@
 
 
 #EXTINF:-1 group-title="beIN Sports",beIN Sport HD 1-AR
-https://prod-fastly-eu-west-1.video.pscp.tv/Transcoding/v1/hls/Gb00Ett_oMveFWNYWDfD2ucqaQhjcx9lpRFu-VIuW_iXGzlLsPqxiBoN9XejbhewAcvhUjMCg6CGSmTafk1lrg/non_transcode/eu-west-1/periscope-replay-direct-prod-eu-west-1-public/master_dynamic_delta.m3u8?type=live
+https://cdn.jsdelivr.net/gh/mo12hk/Inter_media1@main/Yasin1.m3u8
 #EXTINF:-1 group-title="beIN Sports",beIN Sport HD 2-AR
 http://het103a.4rouwanda-shop.store/live/69854211/index.m3u8
 #EXTINF:-1 group-title="beIN Sports",beIN Sport HD 3-AR
