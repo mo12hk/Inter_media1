@@ -1,13 +1,4 @@
 #EXTM3U
 
-
-#EXTINF:-1 group-title="beIN Sports",beIN Sport HD 1-AR
-https://cdn.jsdelivr.net/gh/mo12hk/Inter_media1@main/Yasin1.m3u8
-#EXTINF:-1 group-title="beIN Sports",beIN Sport HD 2-AR
-http://het103a.4rouwanda-shop.store/live/69854211/index.m3u8
-#EXTINF:-1 group-title="beIN Sports",beIN Sport HD 3-AR
-https://mario10mo10da.360eeg.com/trending/media3_low/index.m3u8
-#EXTINF:-1 group-title="beIN Sports",beIN Sport HD 4-AR
-http://het120a.4rouwanda-shop.store/live/9787488847/index.m3u8
-#EXTINF:-1 group-title="beIN Sports",beIN Sport HD 5-AR
-http://het102a.4rouwanda-shop.store/live/610303030/index.m3u8
+#EXTINF:-1 tvg-id="media6" tvg-name="Media6 Low" tvg-logo="" group-title="Trending", Media6 Low
+https://360eeg.com/trending/media6_low/index.m3u8|Referer=https://feed-sep.shikeaben.site/
