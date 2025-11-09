@@ -1,0 +1,257 @@
+:root {  
+    --bg-color: #F9FAFB;  
+    --text-color: #222;  
+    --card-bg: white;  
+    --card-shadow: 0 4px 12px rgba(0,0,0,0.08);  
+    --hover-shadow: 0 6px 18px rgba(0,0,0,0.12);  
+    --sidebar-bg: #fff;  
+    --skeleton-bg: #ccc;  
+    --time-bg: #f1f1f1;  
+    --time-color: #333;  
+    --footer-bg: #ddd;  
+    --footer-text: #555;  
+    /* ألوان إضافية لزر الإغلاق الجديد */  
+    --close-btn-bg: rgba(255, 255, 255, 0.15);  
+    --close-btn-hover-bg: rgba(255, 255, 255, 0.3);  
+}  
+.dark-mode {  
+    --bg-color: #181818;  
+    --text-color: #eee;  
+    --card-bg: #2a2a2a;  
+    --card-shadow: 0 4px 12px rgba(0,0,0,0.2);  
+    --hover-shadow: 0 6px 18px rgba(0,0,0,0.3);  
+    --sidebar-bg: #222;  
+    --skeleton-bg: #444;  
+    --time-bg: #444;  
+    --time-color: #eee;  
+    --footer-bg: #222;  
+    --footer-text: #bbb;  
+}  
+  
+body {  
+    font-family: 'Tajawal', Arial, sans-serif;  
+    margin: 0; padding: 0 0 50px 0;  
+    background-color: var(--bg-color);  
+    color: var(--text-color);  
+    transition: background-color 0.3s, color 0.3s;  
+}  
+.SiteContainer { max-width: 1100px; margin: 80px auto 30px; padding: 20px; }  
+  
+/* Navbar */  
+.navbar {  
+    position: fixed; top: 0; left: 0; right: 0;  
+    height: 60px; background: linear-gradient(90deg, #0062ff, #00c6ff);  
+    display: flex; align-items: center; justify-content: space-between;  
+    padding: 0 20px; font-weight: bold;  
+    z-index: 1001;  
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);  
+    border-bottom-left-radius: 12px;  
+    border-bottom-right-radius: 12px;  
+}  
+.nav-left, .nav-right { display: flex; align-items: center; gap: 12px; }  
+.nav-left span { font-size: 22px; color: white; }  
+  
+/* زر الوضع الليلي والفاتح */  
+.icon-button {  
+    background: none; border: none; cursor: pointer; padding: 6px;  
+    display: flex; align-items: center; justify-content: center;  
+    color: white;  
+}  
+.icon-button .icon-light { display: none; }  
+.dark-mode .icon-button .icon-dark { display: none; }  
+.dark-mode .icon-button .icon-light { display: inline; }  
+.icon { width: 28px; height: 28px; stroke: currentColor; }  
+  
+/* Sidebar */  
+.sidebar {  
+    position: fixed; top: 0; right: 0;  
+    width: 250px; height: 100%; background: var(--sidebar-bg);  
+    box-shadow: -2px 0 12px rgba(0,0,0,0.25);  
+    padding: 20px;  
+    transform: translateX(100%);  
+    transition: transform 0.3s ease;  
+    z-index: 1000;  
+}  
+.sidebar.open { transform: translateX(0); }  
+.sidebar h3 { margin-top: 0; margin-bottom: 20px; font-size: 20px; color: var(--text-color); }  
+.sidebar a { display: flex; align-items: center; gap: 12px; margin: 15px 0; text-decoration: none; color: #0062ff; font-weight: bold; font-size: 16px; }  
+.sidebar a img { width: 22px; height: 22px; }  
+.dark-mode .sidebar a { color: #eee; }  
+  
+/* Overlay */  
+#overlay {  
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;  
+    background: rgba(0,0,0,0.4); display: none; z-index: 999;  
+}  
+  
+/* Title & Messages */  
+.AF_Title { text-align: center; margin: 20px 0; font-size: 26px; font-weight: bold; }  
+.info-message {  
+    background-color: var(--card-bg);  
+    color: var(--text-color);  
+    padding: 20px;  
+    border-radius: 16px;  
+    text-align: center;  
+    font-size: 18px;  
+    margin-top: 20px;  
+    box-shadow: var(--card-shadow);  
+}  
+  
+/* Matches */  
+.AF_Match {  
+    background-color: var(--card-bg); border-radius: 16px; margin-bottom: 18px;  
+    box-shadow: var(--card-shadow);  
+    overflow: hidden; transition: transform 0.2s ease, box-shadow 0.2s ease;  
+    cursor: pointer;  
+}  
+.AF_Match:hover { transform: translateY(-4px); box-shadow: var(--hover-shadow); }  
+  
+.AF_Footer { padding: 10px 15px; background: linear-gradient(90deg, #0062ff, #00c6ff); color: white; font-size: 15px; font-weight: bold; border-radius: 12px; }  
+.AF_inner { display: flex; align-items: center; justify-content: space-between; padding: 18px; }  
+  
+.AF_Team { flex: 1; text-align: center; display: flex; flex-direction: column; align-items: center; }  
+.AF_TeamLogo img, .AF_TeamLogo .skeleton-circle { width: 55px; height: 55px; object-fit: cover; margin: 0 auto; border-radius: 0; }  
+.AF_TeamName { margin-top: 6px; font-weight: bold; font-size: 15px; }  
+  
+.AF_Data { flex: 1; text-align: center; display: flex; flex-direction: column; align-items: center; }  
+.AF_EventResult { display: flex; justify-content: center; align-items: center; gap: 12px; }  
+  
+.result { font-size: 22px; font-weight: bold; min-width: 28px; }  
+.match-data { display: flex; flex-direction: column; align-items: center; gap: 6px; }  
+  
+.AF_EvTime { font-weight: bold; font-size: 14px; padding: 4px 8px; border-radius: 6px; background: var(--time-bg); color: var(--time-color); }  
+.AF_StaText { padding: 5px 12px; border-radius: 20px; color: white; font-size: 14px; font-weight: bold; white-space: nowrap; }  
+  
+/* Skeleton placeholders */  
+.skeleton { background: var(--skeleton-bg); animation: pulse 1.2s infinite ease-in-out; border-radius: 12px; }  
+.skeleton-circle { width: 55px; height: 55px; border-radius: 0; background: var(--skeleton-bg); animation: pulse 1.2s infinite ease-in-out; margin:0 auto; }  
+.AF_TeamName.skeleton { border-radius: 12px; height: 16px; line-height: 16px; background: var(--skeleton-bg); width: 60px; margin: 6px auto; }  
+.result.skeleton { font-size: 22px; font-weight: bold; min-width: 28px; height: 28px; background: var(--skeleton-bg); border-radius: 12px; }  
+.AF_EvTime.skeleton { font-weight: bold; font-size: 14px; padding: 4px 8px; background: var(--skeleton-bg); border-radius: 12px; width: 45px; }  
+.AF_StaText.skeleton { padding: 5px 12px; background: var(--skeleton-bg); color: white; font-size: 13px; font-weight: bold; border-radius: 12px; width: 50px; text-align:center; white-space: nowrap; }  
+@keyframes pulse { 0% { opacity: 0.8; } 50% { opacity: 0.5; } 100% { opacity: 0.8; } }  
+  
+/* Footer Style */  
+.app-footer {  
+    position: fixed;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    background-color: var(--footer-bg);  
+    color: var(--footer-text);  
+    text-align: center;  
+    padding: 15px 0;  
+    font-size: 14px;  
+    font-weight: 500;  
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);  
+    z-index: 100;  
+    transition: background-color 0.3s, color 0.3s;  
+}  
+  
+/* -------------------------------------------  
+   تنسيقات النافذة المنبثقة الاحترافية (MODAL)  
+   **تم التعديل لتوسيط النافذة عمودياً وأفقياً**  
+   ------------------------------------------- */  
+@keyframes fadeIn {  
+    from { opacity: 0; }  
+    to { opacity: 1; }  
+}  
+  
+@keyframes zoomIn {  
+    from { transform: scale(0.9); opacity: 0; }  
+    to { transform: scale(1); opacity: 1; }  
+}  
+  
+@keyframes zoomOut {  
+    from { transform: scale(1); opacity: 1; }  
+    to { transform: scale(0.9); opacity: 0; }  
+}  
+  
+.modal {  
+    display: none;  
+    position: fixed;  
+    z-index: 2000;  
+    left: 0;  
+    top: 0;  
+    width: 100%;  
+    height: 100%;  
+    overflow: auto;  
+    background-color: rgba(0,0,0,0.9);  
+      
+    /* التوسيط الرأسي والأفقي باستخدام Flexbox */  
+    display: flex;  
+    align-items: center; /* توسيط عمودي */  
+    justify-content: center; /* توسيط أفقي */  
+      
+    animation: fadeIn 0.3s ease-out;   
+}  
+  
+.modal-content {  
+    background-color: #fefefe;  
+    padding: 0;  
+    border-radius: 12px;  
+    width: 95%;  
+    max-width: 800px;  
+    box-shadow: 0 5px 25px rgba(0,0,0,0.8);  
+    position: relative;  
+      
+    /* إزالة الهامش العلوي الذي كان يسبب عدم التوسيط التام */  
+    margin: 0;   
+      
+    animation: zoomIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);   
+}  
+  
+.dark-mode .modal-content {  
+    background-color: #2a2a2a;   
+    color: #eee;  
+}  
+  
+.animate__out {  
+    animation: zoomOut 0.2s ease-in forwards;   
+}  
+  
+/* تعديلات زر الإغلاق لجعله أكثر احترافية */  
+.close-button {  
+    color: #fff;  
+    /* خلفية شفافة تظهر بشكل أفضل فوق الفيديو/البث */  
+    background: linear-gradient(90deg, #2288ff, #55bbff);   
+    border: 2px solid rgba(255, 255, 255, 0.5); /* إضافة حد خفيف */  
+    border-radius: 50%;  
+    width: 35px;  
+    height: 35px;  
+    line-height: 35px;  
+    text-align: center;  
+    font-size: 24px; /* تصغير قليل للخط */  
+    font-weight: normal;  
+    position: absolute;  
+    top: 10px;  
+    right: 10px;  
+    cursor: pointer;  
+    z-index: 2001;  
+    transition: background-color 0.2s, transform 0.2s;  
+    user-select: none;  
+}  
+  
+.close-button:hover {  
+    background-color: linear-gradient(90deg, #2288ff, #55bbff);  
+    transform: none; /* إضافة حركة بسيطة عند التمرير */  
+}  
+  
+.modal-body {  
+    padding: 0;  
+    height: 0;  
+    padding-bottom: 77.25%; /* نسبة 16:9 للفيديو -- تمت إعادتها للقيمة الأصلية */  
+    position: relative;  
+    overflow: hidden;  
+    border-radius: 12px;  
+}  
+  
+#liveStreamFrame {  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    border: none;  
+    border-radius: 12px;  
+}  
